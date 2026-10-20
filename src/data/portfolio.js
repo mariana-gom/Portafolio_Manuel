@@ -136,6 +136,8 @@ export const proyectos = [
     descripcion:
       "Catálogo digital con gestión de productos, categorías, carrito de compras y envío de pedidos mediante WhatsApp. Incluye funcionalidades para la administración de productos.",
     tecnologias: ["Flutter", "Firebase", "Firestore", "Cloudinary"],
+    externo: "https://catalogo-dannys.vercel.app/",
+    accion: "Visitar catálogo",
     icono: "dannys",
   },
 ];
