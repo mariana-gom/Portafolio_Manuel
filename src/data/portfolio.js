@@ -217,11 +217,15 @@ export const educacion = [
     titulo: "Tecnólogo en Análisis y Desarrollo de Software",
     institucion: "SENA",
     periodo: "2023 - 2024",
+    estado: "Graduado",
+    detalle: "Formación finalizada con prácticas profesionales completadas en C.I. Sunshine Bouquet S.A.S.",
   },
   {
     titulo: "Técnico en Programación de Software",
     institucion: "SENA",
     periodo: "2021 - 2022",
+    estado: "Graduado",
+    detalle: "Formación técnica finalizada y título obtenido.",
   },
 ];
 

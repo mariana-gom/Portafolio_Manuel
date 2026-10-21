@@ -234,7 +234,7 @@ export default function Home() {
           <div className="rejilla-educacion">
             {educacion.map((estudio) => (
               <article className={estudio.enCurso ? "tarjeta tarjeta-curso" : "tarjeta"} key={estudio.titulo}>
-                {estudio.enCurso ? <p className="etiqueta-curso">En curso</p> : null}
+                <p className="etiqueta-curso">{estudio.enCurso ? "En curso" : estudio.estado}</p>
                 <h3>{estudio.titulo}</h3>
                 <p>{estudio.institucion}</p>
                 <p className="periodo">{estudio.periodo}</p>
