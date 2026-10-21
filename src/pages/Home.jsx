@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Download, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, ChartNoAxesCombined, Download, Layers3, Linkedin, Mail, Workflow } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
 import {
   contacto,
@@ -27,40 +27,56 @@ export default function Home() {
     <main id="contenido">
       <section id="inicio" className="hero">
         <div className="contenedor">
-          <p className="ubicacion">{perfil.ubicacion}</p>
-          <p className="nombre-hero">{perfil.nombre}</p>
-          <h1>{perfil.saludo}</h1>
-          <p className="titulo-hero">{perfil.tituloCorto}</p>
-          <p className="titulo-largo">{perfil.titulo}</p>
-          <div className="descripcion">
-            {perfil.descripcion.map((parrafo) => (
-              <p key={parrafo}>{parrafo}</p>
-            ))}
-          </div>
-          <div className="acciones">
-            <Link className="boton boton-primario" to="/#proyectos">
-              Ver proyectos
-            </Link>
-            <a className="boton boton-secundario" href={perfil.cv} download>
-              <Download size={16} aria-hidden="true" />
-              Descargar CV
-            </a>
-            <Link className="boton boton-secundario" to="/#contacto">
-              Contactarme
-            </Link>
-          </div>
-          <div className="redes redes-hero">
-            {linkedin ? (
-              <a href={contacto.linkedin.trim()} target="_blank" rel="noopener noreferrer">
-                <Linkedin size={16} aria-hidden="true" />
-                LinkedIn
+          <div className="hero-composicion">
+          <div className="hero-texto">
+            <p className="eyebrow">Portafolio profesional · Datos & desarrollo</p>
+            <p className="ubicacion">{perfil.ubicacion}</p>
+            <h1>Manuel Lucero<span>.</span></h1>
+            <p className="nombre-hero">{perfil.nombre}</p>
+            <p className="titulo-hero">{perfil.tituloCorto}</p>
+
+            <div className="descripcion">
+              {perfil.descripcion.map((parrafo) => (
+                <p key={parrafo}>{parrafo}</p>
+              ))}
+            </div>
+            <div className="acciones">
+              <Link className="boton boton-primario" to="/#proyectos">
+                Explorar proyectos <ArrowUpRight size={18} aria-hidden="true" />
+              </Link>
+              <a className="boton boton-secundario" href={perfil.cv} download>
+                <Download size={16} aria-hidden="true" />
+                Descargar CV
               </a>
-            ) : null}
-            {github ? (
-              <a href={contacto.github.trim()} target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-            ) : null}
+              <Link className="boton boton-secundario" to="/#contacto">
+                Contactarme
+              </Link>
+            </div>
+            <div className="redes redes-hero">
+              {linkedin ? (
+                <a href={contacto.linkedin.trim()} target="_blank" rel="noopener noreferrer">
+                  <Linkedin size={16} aria-hidden="true" />
+                  LinkedIn
+                </a>
+              ) : null}
+              {github ? (
+                <a href={contacto.github.trim()} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              ) : null}
+            </div>
+          </div>
+          <aside className="hero-panel" aria-label="Mi enfoque de trabajo">
+            <div className="panel-cabecera"><span>De la información a la acción</span><span aria-hidden="true">↗</span></div>
+            <div className="panel-diagrama" aria-hidden="true">
+              <div className="diagrama-cuadro cuadro-uno"><Layers3 size={38} /></div>
+              <div className="diagrama-cuadro cuadro-dos"><ChartNoAxesCombined size={44} /></div>
+              <div className="diagrama-cuadro cuadro-tres"><Workflow size={34} /></div>
+            </div>
+            <p className="panel-titulo">Claridad para decidir.<br />Tecnología para avanzar.</p>
+            <p className="panel-detalle">Organizar · Analizar · Simplificar</p>
+            <div className="panel-pie"><span>Datos + procesos + software</span><span>ML / 01</span></div>
+          </aside>
           </div>
           <ul className="indicadores">
             {indicadores.map((item) => (
@@ -75,7 +91,8 @@ export default function Home() {
 
       <section id="sobre-mi" className="seccion seccion-alt">
         <div className="contenedor sobre-mi">
-          <h2>Sobre mí</h2>
+          <p className="eyebrow">01 / Perfil</p>
+          <h2>Tecnología con propósito práctico.</h2>
           <p>
             Soy Tecnólogo en Análisis y Desarrollo de Software del SENA y estudiante de Ingeniería
             de Sistemas en la Universidad Nacional Abierta y a Distancia (UNAD), actualmente en
@@ -98,6 +115,14 @@ export default function Home() {
             Me interesa construir soluciones tecnológicas que faciliten el acceso a la información,
             reduzcan tareas manuales y mejoren la gestión de los procesos empresariales.
           </p>
+          <div className="aporte-profesional">
+            <span className="eyebrow">Cómo puedo aportar</span>
+            <h3>Información organizada para equipos y proyectos.</h3>
+            <p>En un estudio de arquitectura, estas capacidades pueden apoyar la consolidación
+              de reportes, la consulta de documentos y el seguimiento de actividades e indicadores.
+              Mi aporte se centra en los datos, la automatización y el desarrollo de herramientas
+              que faciliten el trabajo del equipo.</p>
+          </div>
           <ul className="enfoques">
             {enfoques.map((enfoque) => (
               <li key={enfoque}>{enfoque}</li>
@@ -108,7 +133,8 @@ export default function Home() {
 
       <section id="experiencia" className="seccion">
         <div className="contenedor">
-          <h2>Experiencia</h2>
+          <p className="eyebrow">02 / Trayectoria</p>
+          <h2>Experiencia en problemas reales.</h2>
           <div className="linea-tiempo">
             {experiencia.map((item) => (
               <article className="experiencia" key={`${item.empresa}-${item.periodo}`}>
@@ -154,10 +180,12 @@ export default function Home() {
 
       <section id="proyectos" className="seccion seccion-alt">
         <div className="contenedor">
-          <h2>Proyectos</h2>
+          <p className="eyebrow">03 / Trabajo seleccionado</p>
+          <h2>Ideas que se convierten en soluciones.</h2>
           <p className="intro-seccion">
-            Trabajos de análisis, automatización y desarrollo. No publico tableros ni datos de las
-            empresas.
+            Una selección de trabajos en análisis de datos, automatización y aplicaciones.
+            Cada proyecto parte de una necesidad concreta de organización, consulta o seguimiento.
+            La información empresarial se mantiene confidencial.
           </p>
           <div className="rejilla-proyectos">
             {proyectos.map((proyecto) => (
@@ -182,7 +210,8 @@ export default function Home() {
 
       <section id="habilidades" className="seccion">
         <div className="contenedor">
-          <h2>Habilidades</h2>
+          <p className="eyebrow">04 / Herramientas</p>
+          <h2>Capacidades que se complementan.</h2>
           <div className="rejilla-habilidades">
             {habilidades.map((grupo) => (
               <article className="tarjeta" key={grupo.grupo}>
@@ -200,7 +229,8 @@ export default function Home() {
 
       <section id="educacion" className="seccion seccion-alt">
         <div className="contenedor">
-          <h2>Educación</h2>
+          <p className="eyebrow">05 / Formación</p>
+          <h2>Aprendizaje en movimiento.</h2>
           <div className="rejilla-educacion">
             {educacion.map((estudio) => (
               <article className={estudio.enCurso ? "tarjeta tarjeta-curso" : "tarjeta"} key={estudio.titulo}>
@@ -217,9 +247,11 @@ export default function Home() {
 
       <section id="contacto" className="seccion">
         <div className="contenedor estrecho">
-          <h2>Contacto</h2>
+          <p className="eyebrow">06 / Conversemos</p>
+          <h2>¿Tienes un proceso que podría funcionar mejor?</h2>
           <p>
-            Si buscas apoyo en análisis de datos o desarrollo de software, puedes escribirme.
+            Conversemos sobre cómo organizar tu información, facilitar el seguimiento de tus proyectos
+            o transformar una tarea manual en una solución digital.
           </p>
           <p className="lugar">{perfil.ubicacion}</p>
           <div className="acciones">
@@ -256,11 +288,6 @@ export default function Home() {
           <p>
             <a href={`mailto:${contacto.correo}`}>{contacto.correo}</a>
           </p>
-          {github ? null : (
-            <p className="nota">
-              El enlace de GitHub se configura en <code>src/data/portfolio.js</code>.
-            </p>
-          )}
         </div>
       </section>
     </main>

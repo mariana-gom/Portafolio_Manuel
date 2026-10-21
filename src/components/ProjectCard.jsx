@@ -51,6 +51,7 @@ export default function ProjectCard({ proyecto }) {
       <div className="tarjeta-cuerpo">
         <h3>{titulo}</h3>
         <p>{proyecto.descripcion}</p>
+        {proyecto.aporte ? <p className="aporte-proyecto"><span>Aporte del proyecto</span>{proyecto.aporte}</p> : null}
         {etiquetas.length > 0 ? (
           <ul className="tecnologias">
             {etiquetas.map((etiqueta) => (

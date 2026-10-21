@@ -7,7 +7,7 @@ export const perfil = {
   saludo: "Hola, soy Manuel Lucero.",
   descripcion: [
     "Transformo datos en información útil y desarrollo soluciones tecnológicas que optimizan procesos.",
-    "Cuento con experiencia en Power BI, SQL, Python, Excel y desarrollo de aplicaciones, combinando análisis de datos, automatización y programación para resolver necesidades reales de negocio.",
+    "Ayudo a organizar información, dar seguimiento a procesos y reducir tareas manuales mediante análisis de datos, automatización y aplicaciones.",
   ],
   cv: "/cv/CV-Manuel-Lucero.pdf",
 };
@@ -15,8 +15,8 @@ export const perfil = {
 export const indicadores = [
   { valor: "+20", detalle: "reportes desarrollados" },
   { valor: "3", detalle: "experiencias profesionales" },
-  { valor: "Python, SQL y Power BI", detalle: "" },
-  { valor: "Desarrollo de aplicaciones", detalle: "" },
+  { valor: "Datos", detalle: "indicadores y tableros de gestión" },
+  { valor: "Software", detalle: "aplicaciones web y móviles" },
 ];
 
 export const enfoques = [
@@ -98,6 +98,7 @@ export const proyectos = [
       "Solución de análisis de datos orientada al seguimiento de indicadores operativos, auditorías, rankings, revisiones de calidad y análisis de no conformidades. Permite comparar resultados por periodos, identificar tendencias y facilitar la consulta de información.",
     tecnologias: ["Power BI", "SQL", "DAX", "Power Query"],
     etiquetas: ["Business Intelligence", "Dashboards", "SQL", "Análisis de datos"],
+    aporte: "Seguimiento de indicadores y consulta de resultados por periodo.",
     icono: "reportes",
   },
   {
@@ -107,6 +108,7 @@ export const proyectos = [
     descripcion:
       "Solución desarrollada mediante macros de Excel para consultar información desde bases de datos SQL, organizar fotografías y facilitar la generación de reportes. El objetivo fue reducir actividades manuales y simplificar la preparación de información operativa.",
     tecnologias: ["Excel", "VBA", "SQL Server"],
+    aporte: "Preparación de reportes y fotografías con menos tareas manuales.",
     icono: "automatizacion",
   },
   {
@@ -118,6 +120,7 @@ export const proyectos = [
     etiquetas: ["Análisis de datos", "Silver Economy"],
     externo: "https://www.supercanas.com/",
     accion: "Visitar proyecto",
+    aporte: "Información organizada para acompañar el seguimiento del proyecto.",
     icono: "supercanas",
   },
   {
@@ -127,6 +130,7 @@ export const proyectos = [
     descripcion:
       "Aplicación móvil y web implementada para centralizar información relacionada con aprendices, instructores y comités. Incluye consultas de información, seguimiento de procesos y generación de documentos PDF y Excel.",
     tecnologias: ["Flutter", "Dart", "Python", "Django", "APIs REST"],
+    aporte: "Información académica y documentos en un solo sistema.",
     icono: "academico",
   },
   {
@@ -138,6 +142,7 @@ export const proyectos = [
     tecnologias: ["Flutter", "Firebase", "Firestore", "Cloudinary"],
     externo: "https://catalogo-dannys.vercel.app/",
     accion: "Visitar catálogo",
+    aporte: "Productos y pedidos conectados con un canal de venta por WhatsApp.",
     icono: "dannys",
   },
 ];
