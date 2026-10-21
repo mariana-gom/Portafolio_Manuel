@@ -139,7 +139,7 @@ export const proyectos = [
     categoria: "Desarrollo de aplicaciones",
     descripcion:
       "Catálogo digital con gestión de productos, categorías, carrito de compras y envío de pedidos mediante WhatsApp. Incluye funcionalidades para la administración de productos.",
-    tecnologias: ["Flutter", "Firebase", "Firestore", "Cloudinary"],
+    tecnologias: ["JavaScript", "Next.js", "Flutter", "Firebase", "Firestore", "Cloudinary"],
     externo: "https://catalogo-dannys.vercel.app/",
     accion: "Visitar catálogo",
     aporte: "Productos y pedidos conectados con un canal de venta por WhatsApp.",
@@ -193,7 +193,7 @@ export const habilidades = [
   },
   {
     grupo: "Programación",
-    items: ["Python", "Dart", "Flutter", "Django", "APIs REST"],
+    items: ["Python", "JavaScript", "Next.js", "Dart", "Flutter", "Django", "APIs REST"],
   },
   {
     grupo: "Bases de datos",
